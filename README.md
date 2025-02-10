@@ -16,7 +16,7 @@ Some of the key issues with default CSS (Fixed with override.css):
 
 ## Installation
 > [!NOTE]
-> If you already have base css classes overwritten, you should remove them to avoid conflicts & unnecessary code (Ideally this is for new projects only).
+> If you already have base css classes overwritten, you should remove them to avoid conflicts & unnecessary code. (Ideally this is for new projects only)
 
 1. Install the latest release: [Click Here](https://github.com/tristanbudd/override-css/releases/ "Click Here")
 2. Place the override.css file under your root directory, public asset directory or anywhere where you can easily access it.
