@@ -29,7 +29,6 @@
     -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
     -webkit-font-smoothing: antialiased; /* Improve text rendering in WebKit */
     -moz-osx-font-smoothing: grayscale; /* Improve text rendering on macOS */
-
     -ms-text-size-adjust: 100%; /* IE 11 */
     -webkit-text-size-adjust: 100%; /* iOS Safari */
     overflow-y: scroll; /* Prevents layout shifts in older browsers */
@@ -43,11 +42,18 @@ html, body {
     font-size: 100%;
     font-family: sans-serif;
     background: transparent;
+    text-rendering: optimizeSpeed;
 }
 
 /* Scroll Behavior */
 html {
     scroll-behavior: smooth;
+}
+
+/* Override Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 /* Hide Lists By Default (Easier Navigation Creation) */
@@ -71,12 +77,15 @@ button, input, select, textarea {
     -webkit-appearance: none; /* Needed for Safari */
     -moz-appearance: none; /* Older Firefox */
     -ms-appearance: none; /* Edge Legacy */
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Normalize Links */
 a {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 a:hover {
@@ -89,7 +98,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
 }
 
 /* Image & Video Responsiveness */
-img, video, iframe {
+img, video, iframe, svg, canvas, audio, object, embed {
     max-width: 100%;
     height: auto;
     display: block;
@@ -103,6 +112,13 @@ input, textarea {
     user-select: auto;
 }
 
+/* Fixed Inheritance (Cross Browser Support) */
+input, textarea, button, select {
+    font: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
 /* Improve Placeholder Readability */
 ::placeholder {
     color: inherit;
@@ -111,6 +127,17 @@ input, textarea {
 :-ms-input-placeholder {
     color: inherit;
     opacity: 0.6;
+}
+
+/* Top-Based Text & Auto Overflow For Textarea */
+textarea {
+    vertical-align: top;
+    overflow: auto;
+}
+
+/* Override Firefox Placeholder Opacity */
+::-moz-placeholder {
+  opacity: 1;
 }
 
 /* Adds Reduced Motions For Animations */
