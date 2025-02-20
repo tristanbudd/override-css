@@ -31,7 +31,6 @@
     -moz-osx-font-smoothing: grayscale; /* Improve text rendering on macOS */
     -ms-text-size-adjust: 100%; /* IE 11 */
     -webkit-text-size-adjust: 100%; /* iOS Safari */
-    overflow-y: scroll; /* Prevents layout shifts in older browsers */
 }
 
 /* Basic Page Setup */
